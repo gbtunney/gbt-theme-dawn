@@ -1,0 +1,45 @@
+{
+  "name": "@gbtunney/dawn",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/gbtunney/shopify-monorepo.git"
+},
+  "license": "MIT",
+  "author": {
+    "name": "Gillian Tunney",
+    "email": "gbtunney@mac.com"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.25.0",
+    "@shopify/prettier-plugin-liquid": "^1.0.0",
+    "@snailicide/build-config": "workspace:^0.2.4",
+    "@types/node": "^18.7.18",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.29.0",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.5",
+    "vite-plugin-shopify": "^0.0.7",
+    "vite-plugin-static-copy": "^0.12.0"
+  },
+  "config": {
+    "eslint": {
+      "extensions": "ts,js,cjs,mjs",
+      "path": ".es*,*,**/*",
+      "config": ".eslintrc.cjs"
+    },
+    "prettier": {
+      "extensions": "liquid,ts,js,cjs,mjs,cts,json,yaml,yml,graphql,md",
+      "path": "*,**/*",
+      "config": "prettier.config.cjs"
+    }
+  },
+  "keywords": []
+}
