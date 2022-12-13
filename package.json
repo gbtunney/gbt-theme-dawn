@@ -7,10 +7,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/gbtunney/shopify-monorepo.git"
-},
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbtunney/shopify-monorepo.git"
+  },
   "license": "MIT",
   "author": {
     "name": "Gillian Tunney",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@shopify/cli": "^3.25.0",
     "@shopify/prettier-plugin-liquid": "^1.0.0",
+    "@shopify/theme": "^3.25.0",
     "@snailicide/build-config": "workspace:^0.2.4",
     "@types/node": "^18.7.18",
     "cross-env": "^7.0.3",

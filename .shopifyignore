@@ -5,3 +5,4 @@ vite.config.ts
 tsconfig.json
 node_modules/
 jspm_packages/
+.npmrc
