@@ -1,15 +1,15 @@
 {
   "current": {
-    "colors_solid_button_labels": "#b42c2c",
+    "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
     "colors_accent_2": "#334fb4",
     "gradient_accent_2": "",
     "colors_text": "#121212",
     "colors_outline_button_labels": "#121212",
-    "colors_background_1": "#36e2db",
+    "colors_background_1": "#f42e2e",
     "gradient_background_1": "",
-    "colors_background_2": "#ff6766",
+    "colors_background_2": "#f3f3f3",
     "gradient_background_2": "",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -125,9 +125,9 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "I am development !!!",
+              "text": "staging!!!!",
               "text_alignment": "center",
-              "color_scheme": "inverse",
+              "color_scheme": "accent-2",
               "link": ""
             }
           }
@@ -141,7 +141,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "background-1",
+          "color_scheme": "inverse",
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "main-menu",
