@@ -127,7 +127,7 @@
             "settings": {
               "text": "staging!!!!",
               "text_alignment": "center",
-              "color_scheme": "background-1",
+              "color_scheme": "accent-2",
               "link": ""
             }
           }
@@ -141,7 +141,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "background-1",
+          "color_scheme": "inverse",
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "main-menu",
