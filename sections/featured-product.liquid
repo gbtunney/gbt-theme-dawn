@@ -19,7 +19,7 @@
   }
 {%- endstyle -%}
 
-<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel='stylesheet' href='{{ 'component-deferred-media.css' | asset_url }}' media='print' onload="this.media='all'">
 
 {%- liquid
   assign product = section.settings.product
@@ -37,35 +37,32 @@
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
   <link
-    id="ModelViewerStyle"
-    rel="stylesheet"
-    href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css"
-    media="print"
-    onload="this.media='all'"
-  >
+    id='ModelViewerStyle'
+    rel='stylesheet'
+    href='https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css'
+    media='print'
+    onload="this.media='all'">
   <link
-    id="ModelViewerOverride"
-    rel="stylesheet"
-    href="{{ 'component-model-viewer-ui.css' | asset_url }}"
-    media="print"
-    onload="this.media='all'"
-  >
+    id='ModelViewerOverride'
+    rel='stylesheet'
+    href='{{ 'component-model-viewer-ui.css' | asset_url }}'
+    media='print'
+    onload="this.media='all'">
 {%- endif -%}
 
-<section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}">
-  <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
-    <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-      <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
+<section class='color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}'>
+  <div class='page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}'>
+    <div class='featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}'>
+      <div class='grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}'>
         <media-gallery
-          id="MediaGallery-{{ section.id }}"
-          role="region"
-          aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
-          data-desktop-layout="stacked"
-        >
-          <div id="GalleryViewer-{{ section.id }}" class="product__media-list">
+          id='MediaGallery-{{ section.id }}'
+          role='region'
+          aria-label='{{ 'products.product.media.gallery_viewer' | t }}'
+          data-desktop-layout='stacked'>
+          <div id='GalleryViewer-{{ section.id }}' class='product__media-list'>
             {%- if product.selected_or_first_available_variant.featured_media != null -%}
               {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-              <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
+              <div class='product__media-item' data-media-id='{{ section.id }}-{{ media.id }}'>
                 {% render 'product-thumbnail',
                   media: media,
                   position: 'featured',
@@ -88,7 +85,7 @@
               {%- if media_to_render contains media.id
                 and media.id != product.selected_or_first_available_variant.featured_media.id
               -%}
-                <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
+                <div class='product__media-item' data-media-id='{{ section.id }}-{{ media.id }}'>
                   {% render 'product-thumbnail',
                     media: media,
                     position: forloop.index,
@@ -105,22 +102,21 @@
           </div>
           {%- if first_3d_model -%}
             <button
-              class="button button--full-width product__xr-button"
-              type="button"
-              aria-label="{{ 'products.product.xr_button_label' | t }}"
+              class='button button--full-width product__xr-button'
+              type='button'
+              aria-label='{{ 'products.product.xr_button_label' | t }}'
               data-shopify-xr
-              data-shopify-model3d-id="{{ first_3d_model.id }}"
-              data-shopify-title="{{ product.title | escape }}"
-              data-shopify-xr-hidden
-            >
+              data-shopify-model3d-id='{{ first_3d_model.id }}'
+              data-shopify-title='{{ product.title | escape }}'
+              data-shopify-xr-hidden>
               {% render 'icon-3d-model' %}
               {{ 'products.product.xr_button' | t }}
             </button>
           {%- endif -%}
         </media-gallery>
       </div>
-      <div class="product__info-wrapper grid__item">
-        <div id="ProductInfo-{{ section.id }}" class="product__info-container">
+      <div class='product__info-wrapper grid__item'>
+        <div id='ProductInfo-{{ section.id }}' class='product__info-container'>
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
           {%- for block in section.blocks -%}
@@ -129,13 +125,14 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
+                  class='product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}'
+                  {{ block.shopify_attributes }}>
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
-                <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                <h2
+                  class='product__title {{ block.settings.heading_size }}'
+                  {{ block.shopify_attributes }}>
                   {%- if product.title != blank -%}
                     {{ product.title | escape }}
                   {%- else -%}
@@ -143,7 +140,11 @@
                   {%- endif -%}
                 </h2>
               {%- when 'price' -%}
-                <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div
+                  class='no-js-hidden'
+                  id='price-{{ section.id }}'
+                  role='status'
+                  {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -152,7 +153,7 @@
                   -%}
                 </div>
                 {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-                  <div class="product__tax caption rte">
+                  <div class='product__tax caption rte'>
                     {%- if shop.taxes_included -%}
                       {{ 'products.product.include_taxes' | t }}
                     {%- endif -%}
@@ -164,47 +165,47 @@
                 {%- if product != blank -%}
                   <div {{ block.shopify_attributes }}>
                     {%- form 'product', product -%}
-                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                      <input
+                        type='hidden'
+                        name='id'
+                        value='{{ product.selected_or_first_available_variant.id }}'>
                       {{ form | payment_terms }}
                     {%- endform -%}
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p
-                  class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
-                  id="Sku-{{ section.id }}"
-                  role="status"
-                  {{ block.shopify_attributes }}
-                >
-                  <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
+                  class='product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}'
+                  id='Sku-{{ section.id }}'
+                  role='status'
+                  {{ block.shopify_attributes }}>
+                  <span class='visually-hidden'>{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'quantity_selector' -%}
                 <div
-                  class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
-                  <label class="form__label" for="Quantity-{{ section.id }}">
+                  class='product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}'
+                  {{ block.shopify_attributes }}>
+                  <label class='form__label' for='Quantity-{{ section.id }}'>
                     {{ 'products.product.quantity.label' | t }}
                   </label>
-                  <quantity-input class="quantity">
-                    <button class="quantity__button no-js-hidden" name="minus" type="button">
-                      <span class="visually-hidden">
+                  <quantity-input class='quantity'>
+                    <button class='quantity__button no-js-hidden' name='minus' type='button'>
+                      <span class='visually-hidden'>
                         {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                       </span>
                       {% render 'icon-minus' %}
                     </button>
                     <input
-                      class="quantity__input"
-                      type="number"
-                      name="quantity"
-                      id="Quantity-{{ section.id }}"
-                      min="1"
-                      value="1"
-                      form="{{ product_form_id }}"
-                    >
-                    <button class="quantity__button no-js-hidden" name="plus" type="button">
-                      <span class="visually-hidden">
+                      class='quantity__input'
+                      type='number'
+                      name='quantity'
+                      id='Quantity-{{ section.id }}'
+                      min='1'
+                      value='1'
+                      form='{{ product_form_id }}'>
+                    <button class='quantity__button no-js-hidden' name='plus' type='button'>
+                      <span class='visually-hidden'>
                         {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                       </span>
                       {% render 'icon-plus' %}
@@ -232,25 +233,23 @@
                     endif
                   %}
                   <div
-                    class="rating"
-                    role="img"
-                    aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
-                  >
+                    class='rating'
+                    role='img'
+                    aria-label='{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}'>
                     <span
-                      aria-hidden="true"
-                      class="rating-star color-icon-{{ settings.accent_icons }}"
-                      style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-                    ></span>
+                      aria-hidden='true'
+                      class='rating-star color-icon-{{ settings.accent_icons }}'
+                      style='--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};'></span>
                   </div>
-                  <p class="rating-text caption">
-                    <span aria-hidden="true">
+                  <p class='rating-text caption'>
+                    <span aria-hidden='true'>
                       {{- product.metafields.reviews.rating.value }} /
                       {{ product.metafields.reviews.rating.value.scale_max -}}
                     </span>
                   </p>
-                  <p class="rating-count caption">
-                    <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-                    <span class="visually-hidden">
+                  <p class='rating-count caption'>
+                    <span aria-hidden='true'>({{ product.metafields.reviews.rating_count }})</span>
+                    <span class='visually-hidden'>
                       {{- product.metafields.reviews.rating_count }}
                       {{ 'accessibility.total_reviews' | t -}}
                     </span>
@@ -262,29 +261,27 @@
           {%- endfor -%}
           <a
             {% if product == blank %}
-              role="link" aria-disabled="true"
+              role='link' aria-disabled='true'
             {% else %}
-              href="{{ product.url }}"
+              href='{{ product.url }}'
             {% endif %}
-            class="link product__view-details animate-arrow"
-          >
+            class='link product__view-details animate-arrow'>
             {{ 'products.product.view_full_details' | t }}
             {% render 'icon-arrow' %}
           </a>
         </div>
       </div>
       {%- if section.settings.media_position == 'right' -%}
-        <div class="grid__item product__media-wrapper small-hide">
+        <div class='grid__item product__media-wrapper small-hide'>
           <media-gallery
-            id="MediaGallery-{{ section.id }}-right"
-            role="region"
-            aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
-            data-desktop-layout="stacked"
-          >
-            <div id="GalleryViewer-{{ section.id }}-right" class="product__media-list">
+            id='MediaGallery-{{ section.id }}-right'
+            role='region'
+            aria-label='{{ 'products.product.media.gallery_viewer' | t }}'
+            data-desktop-layout='stacked'>
+            <div id='GalleryViewer-{{ section.id }}-right' class='product__media-list'>
               {%- if product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
+                <div class='product__media-item' data-media-id='{{ section.id }}-{{ media.id }}'>
                   {% render 'product-thumbnail',
                     media: media,
                     position: 'featured',
@@ -301,7 +298,7 @@
                 {%- if media_to_render contains media.id
                   and media.id != product.selected_or_first_available_variant.featured_media.id
                 -%}
-                  <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
+                  <div class='product__media-item' data-media-id='{{ section.id }}-{{ media.id }}'>
                     {% render 'product-thumbnail',
                       media: media,
                       position: forloop.index,
@@ -318,14 +315,13 @@
             </div>
             {%- if first_3d_model -%}
               <button
-                class="button button--full-width product__xr-button"
-                type="button"
-                aria-label="{{ 'products.product.xr_button_label' | t }}"
+                class='button button--full-width product__xr-button'
+                type='button'
+                aria-label='{{ 'products.product.xr_button_label' | t }}'
                 data-shopify-xr
-                data-shopify-model3d-id="{{ first_3d_model.id }}"
-                data-shopify-title="{{ product.title | escape }}"
-                data-shopify-xr-hidden
-              >
+                data-shopify-model3d-id='{{ first_3d_model.id }}'
+                data-shopify-title='{{ product.title | escape }}'
+                data-shopify-xr-hidden>
                 {% render 'icon-3d-model' %}
                 {{ 'products.product.xr_button' | t }}
               </button>
@@ -338,19 +334,19 @@
   </div>
 </section>
 
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src='{{ 'product-form.js' | asset_url }}' defer='defer'></script>
 {%- if section.settings.image_zoom == 'hover' -%}
-  <script id="EnableZoomOnHover-featured" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
+  <script id='EnableZoomOnHover-featured' src='{{ 'magnify.js' | asset_url }}' defer='defer'></script>
 {%- endif %}
 {%- if request.design_mode -%}
-  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+  <script src='{{ 'theme-editor.js' | asset_url }}' defer='defer'></script>
 {%- endif -%}
 
 {%- if first_3d_model -%}
-  <script type="application/json" id="ProductJSON-{{ product.id }}">
+  <script type='application/json' id='ProductJSON-{{ product.id }}'>
     {{ product.media | where: 'media_type', 'model' | json }}
   </script>
-  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
+  <script src='{{ 'product-model.js' | asset_url }}' defer></script>
 {%- endif -%}
 
 {%- liquid
@@ -361,7 +357,7 @@
   endif
 -%}
 
-<script type="application/ld+json">
+<script type='application/ld+json'>
   {
     "@context": "http://schema.org/",
     "@type": "Product",
@@ -409,33 +405,33 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
-      const ua = window.navigator.userAgent;
-      const msie = ua.indexOf('MSIE ');
-      const trident = ua.indexOf('Trident/');
+      const ua = window.navigator.userAgent
+      const msie = ua.indexOf('MSIE ')
+      const trident = ua.indexOf('Trident/')
 
-      return msie > 0 || trident > 0;
+      return msie > 0 || trident > 0
     }
 
-    if (!isIE()) return;
-    const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
-    const noScriptInputWrapper = document.createElement('div');
+    if (!isIE()) return
+    const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]')
+    const noScriptInputWrapper = document.createElement('div')
     const variantSwitcher =
       document.querySelector('variant-radios[data-section="{{ section.id }}"]') ||
-      document.querySelector('variant-selects[data-section="{{ section.id }}"]');
+      document.querySelector('variant-selects[data-section="{{ section.id }}"]')
     noScriptInputWrapper.innerHTML = document.querySelector(
       '.product-form__noscript-wrapper-{{ section.id }}'
-    ).textContent;
-    variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+    ).textContent
+    variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML
 
     document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
-      hiddenInput.value = event.currentTarget.value;
-    });
-  });
+      hiddenInput.value = event.currentTarget.value
+    })
+  })
 </script>
 
 {% if product.media.size > 0 %}
-  <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+  <script src='{{ 'product-modal.js' | asset_url }}' defer='defer'></script>
+  <script src='{{ 'media-gallery.js' | asset_url }}' defer='defer'></script>
 {% endif %}
 
 {% schema %}

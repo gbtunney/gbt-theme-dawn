@@ -4,10 +4,7 @@ function getFocusableElements(container) {
             "summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
         )
     )
-
 }
-
-
 
 document.querySelectorAll('[id^="Details-"] summary').forEach((summary) => {
     summary.setAttribute('role', 'button')

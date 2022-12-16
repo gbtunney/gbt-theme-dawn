@@ -37,71 +37,67 @@
   endif
 -%}
 <ul
-  class="icon-with-text icon-with-text--{{ block.settings.layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
-  {{ block.shopify_attributes }}
->
+  class='icon-with-text icon-with-text--{{ block.settings.layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}'
+  {{ block.shopify_attributes }}>
   {%- unless heading_1_empty -%}
-    <li class="icon-with-text__item">
+    <li class='icon-with-text__item'>
       {%- if block.settings.image_1 == null -%}
         {%- render 'icon-accordion', icon: block.settings.icon_1 -%}
       {%- else -%}
         <img
-          src="{{ block.settings.image_1 | image_url }}"
+          src='{{ block.settings.image_1 | image_url }}'
           {% if block.settings.image_1.alt != blank %}
-            alt="{{ block.settings.image_1.alt | escape }}"
+            alt='{{ block.settings.image_1.alt | escape }}'
           {% else %}
-            role="presentation"
+            role='presentation'
           {% endif %}
-          height="auto"
-          width="auto"
-          loading="lazy"
-        >
+          height='auto'
+          width='auto'
+          loading='lazy'>
       {%- endif -%}
-      <span class="h4">
+      <span class='h4'>
         {{- block.settings.heading_1 -}}
       </span>
     </li>
   {%- endunless -%}
   {%- unless heading_2_empty -%}
-    <li class="icon-with-text__item">
+    <li class='icon-with-text__item'>
       {%- if block.settings.image_2 == null -%}
         {% render 'icon-accordion', icon: block.settings.icon_2 -%}
       {%- else -%}
         <img
-          src="{{ block.settings.image_2 | image_url }}"
+          src='{{ block.settings.image_2 | image_url }}'
           {% if block.settings.image_2.alt != blank %}
-            alt="{{ block.settings.image_2.alt | escape }}"
+            alt='{{ block.settings.image_2.alt | escape }}'
           {% else %}
-            role="presentation"
+            role='presentation'
           {% endif %}
-          height="auto"
-          width="auto"
-          loading="lazy"
-        >
+          height='auto'
+          width='auto'
+          loading='lazy'>
       {%- endif -%}
-      <span class="h4">
+      <span class='h4'>
         {{- block.settings.heading_2 -}}
       </span>
     </li>
   {%- endunless -%}
   {%- unless heading_3_empty -%}
-    <li class="icon-with-text__item">
+    <li class='icon-with-text__item'>
       {%- if block.settings.image_3 == null -%}
         {% render 'icon-accordion', icon: block.settings.icon_3 -%}
       {%- else -%}
         <img
-          src="{{ block.settings.image_3 | image_url }}"
+          src='{{ block.settings.image_3 | image_url }}'
           {% if block.settings.image_3.alt != blank %}
-            alt="{{ block.settings.image_3.alt | escape }}"
+            alt='{{ block.settings.image_3.alt | escape }}'
           {% else %}
-            role="presentation"
+            role='presentation'
           {% endif %}
-          height="auto"
-          width="auto"
-          loading="lazy"
-        >
+          height='auto'
+          width='auto'
+          loading='lazy'>
       {%- endif -%}
-      <span class="h4">
+      <span class='h4'>
         {{- block.settings.heading_3 -}}
       </span>
     </li>

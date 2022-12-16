@@ -1,24 +1,22 @@
 import path from 'path'
 import { defineConfig, UserConfig } from 'vite'
 import shopify from 'vite-plugin-shopify'
+import WindiCSS from 'vite-plugin-windicss'
+
 import { viteStaticCopy, ViteStaticCopyOptions } from 'vite-plugin-static-copy'
 //import shopifyModules from 'vite-plugin-shopify-modules'
 import vue from '@vitejs/plugin-vue'
-
-
 
 import { zod } from '@snailicide/g-library'
 
 //make a schema for arguments:
 const vite_schema = zod.object({
-  watch: zod.optionalDefault( zod.boolean(), false)
+    watch: zod.optionalDefault(zod.boolean(), false),
 
- //   watch: zod.optionalDefault( zod.boolean(), false)
+    //   watch: zod.optionalDefault( zod.boolean(), false)
 })
 
-const argObj = {
-
-}
+const argObj = {}
 
 const ARGS = vite_schema.parse(argObj)
 
@@ -51,8 +49,10 @@ const getViteConfig = (config: ViteConfigBuildOptions): UserConfig => {
             port: 8080,
         },
         base: './',
-
-      /*  build: {
+        build: {
+            minify: false,
+        },
+        /*  build: {
             ...(ARGS.watch === true
                 ? {
                     rollupOutputOptions: {
@@ -69,8 +69,9 @@ const getViteConfig = (config: ViteConfigBuildOptions): UserConfig => {
             // emptyOutDir: config.emptyOutDir === true,
         },*/
         plugins: [
+            WindiCSS(),
             vue(),
-          ...(config.copy === true
+            ...(config.copy === true
                 ? viteStaticCopy({
                       targets: [
                           {
@@ -83,8 +84,8 @@ const getViteConfig = (config: ViteConfigBuildOptions): UserConfig => {
             ...(config.shopify === true
                 ? shopify({
                       themeRoot: path.resolve(__dirname, '.'),
-                    sourceCodeDir:path.resolve(__dirname, './src'),
-                    entrypointsDir:path.resolve(__dirname, './src/entry'),
+                      sourceCodeDir: path.resolve(__dirname, './src'),
+                      entrypointsDir: path.resolve(__dirname, './src/entry'),
                       additionalEntrypoints: [
                           'src/styles/*',
                           'src/scripts/*',
