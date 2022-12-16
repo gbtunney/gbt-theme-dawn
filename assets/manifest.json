@@ -1,190 +1,178 @@
 {
-  "src/static/images/vite.svg": {
-    "file": "vite-4a748afd.svg",
-    "src": "src/static/images/vite.svg"
-  },
-  "src/entry/assets/vue.svg": {
-    "file": "vue-f7c70afb.js",
-    "src": "src/entry/assets/vue.svg",
-    "isEntry": true,
-    "assets": [
-      "vue-5532db34.svg"
-    ]
-  },
-  "src/entry/App.css": {
-    "file": "App-30287257.css",
-    "src": "src/entry/App.css"
-  },
-  "src/entry/components/HelloWorld.css": {
-    "file": "HelloWorld-92f09db3.css",
-    "src": "src/entry/components/HelloWorld.css"
-  },
-  "src/entry/style.css": {
-    "file": "style-f5d8faae.css",
-    "src": "src/entry/style.css",
-    "isEntry": true
-  },
-  "src/styles/base.css": {
-    "file": "base-33d54b18.css",
-    "src": "src/styles/base.css",
-    "isEntry": true
-  },
-  "src/scripts/index.css": {
-    "file": "index-29946b27.css",
-    "src": "src/scripts/index.css"
-  },
-  "src/entry/vite-env.d.ts": {
-    "file": "vite-env.d-4ed993c7.js",
-    "src": "src/entry/vite-env.d.ts",
-    "isEntry": true
-  },
-  "src/entry/assets/vite.svg": {
-    "file": "vite-4ed993c7.js",
-    "src": "src/entry/assets/vite.svg",
-    "isEntry": true
-  },
-  "src/scripts/customer.js": {
-    "file": "customer-4ed993c7.js",
-    "src": "src/scripts/customer.js",
-    "isEntry": true
-  },
-  "src/scripts/details-disclosure.js": {
-    "file": "details-disclosure-f4a31e98.js",
-    "src": "src/scripts/details-disclosure.js",
-    "isEntry": true
-  },
-  "src/scripts/cart-notification.js": {
-    "file": "cart-notification-cc7db038.js",
-    "src": "src/scripts/cart-notification.js",
-    "isEntry": true
-  },
-  "src/scripts/cart-drawer.js": {
-    "file": "cart-drawer-38bd2a83.js",
-    "src": "src/scripts/cart-drawer.js",
-    "isEntry": true
-  },
-  "src/scripts/cart.js": {
-    "file": "cart-5ee3868b.js",
-    "src": "src/scripts/cart.js",
-    "isEntry": true
-  },
-  "src/entry/main.ts": {
-    "file": "main-8108d053.js",
-    "src": "src/entry/main.ts",
-    "isEntry": true,
-    "imports": [
-      "src/entry/components/HelloWorld.vue",
-      "src/entry/App.vue",
-      "src/entry/assets/vue.svg"
-    ],
-    "css": [
-      "style-f5d8faae.css"
-    ]
-  },
-  "src/scripts/details-modal.js": {
-    "file": "details-modal-51d20b17.js",
-    "src": "src/scripts/details-modal.js",
-    "isEntry": true
-  },
-  "src/scripts/facets.js": {
-    "file": "facets-9d8836ac.js",
-    "src": "src/scripts/facets.js",
-    "isEntry": true
-  },
-  "src/scripts/magnify.js": {
-    "file": "magnify-e7cdf758.js",
-    "src": "src/scripts/magnify.js",
-    "isEntry": true
-  },
-  "src/scripts/global.js": {
-    "file": "global-6995d218.js",
-    "src": "src/scripts/global.js",
-    "isEntry": true
-  },
-  "src/scripts/password-modal.js": {
-    "file": "password-modal-cc269f31.js",
-    "src": "src/scripts/password-modal.js",
-    "isEntry": true
-  },
-  "src/scripts/predictive-search.js": {
-    "file": "predictive-search-76cbf3ea.js",
-    "src": "src/scripts/predictive-search.js",
-    "isEntry": true
-  },
-  "src/scripts/pickup-availability.js": {
-    "file": "pickup-availability-447b8312.js",
-    "src": "src/scripts/pickup-availability.js",
-    "isEntry": true
-  },
-  "src/scripts/media-gallery.js": {
-    "file": "media-gallery-3ab6810a.js",
-    "src": "src/scripts/media-gallery.js",
-    "isEntry": true
-  },
-  "src/scripts/product-modal.js": {
-    "file": "product-modal-ad34b89c.js",
-    "src": "src/scripts/product-modal.js",
-    "isEntry": true
-  },
-  "src/scripts/product-model.js": {
-    "file": "product-model-7fbc532b.js",
-    "src": "src/scripts/product-model.js",
-    "isEntry": true
-  },
-  "src/scripts/product-form.js": {
-    "file": "product-form-b72db4c9.js",
-    "src": "src/scripts/product-form.js",
-    "isEntry": true
-  },
-  "src/scripts/quick-add.js": {
-    "file": "quick-add-35620ceb.js",
-    "src": "src/scripts/quick-add.js",
-    "isEntry": true
-  },
-  "src/scripts/show-more.js": {
-    "file": "show-more-e804bb48.js",
-    "src": "src/scripts/show-more.js",
-    "isEntry": true
-  },
-  "src/scripts/share.js": {
-    "file": "share-bc829d22.js",
-    "src": "src/scripts/share.js",
-    "isEntry": true
-  },
-  "src/scripts/theme-editor.js": {
-    "file": "theme-editor-948b40e2.js",
-    "src": "src/scripts/theme-editor.js",
-    "isEntry": true
-  },
-  "src/entry/App.vue": {
-    "file": "App-4ab790fa.js",
-    "src": "src/entry/App.vue",
-    "isEntry": true,
-    "imports": [
-      "src/entry/assets/vue.svg",
-      "src/entry/components/HelloWorld.vue"
-    ],
-    "css": [
-      "App-30287257.css"
-    ],
-    "assets": [
-      "vite-4a748afd.svg"
-    ]
-  },
-  "src/scripts/index.ts": {
-    "file": "index-e09e7c73.js",
-    "src": "src/scripts/index.ts",
-    "isEntry": true,
-    "css": [
-      "index-29946b27.css"
-    ]
-  },
-  "src/entry/components/HelloWorld.vue": {
-    "file": "HelloWorld-dd61562b.js",
-    "src": "src/entry/components/HelloWorld.vue",
-    "isEntry": true,
-    "css": [
-      "HelloWorld-92f09db3.css"
-    ]
-  }
+    "src/static/images/vite.svg": {
+        "file": "vite-4a748afd.svg",
+        "src": "src/static/images/vite.svg"
+    },
+    "src/entry/assets/vue.svg": {
+        "file": "vue-f7c70afb.js",
+        "src": "src/entry/assets/vue.svg",
+        "isEntry": true,
+        "assets": ["vue-5532db34.svg"]
+    },
+    "src/entry/App.css": {
+        "file": "App-30287257.css",
+        "src": "src/entry/App.css"
+    },
+    "src/entry/components/HelloWorld.css": {
+        "file": "HelloWorld-92f09db3.css",
+        "src": "src/entry/components/HelloWorld.css"
+    },
+    "src/entry/style.css": {
+        "file": "style-f5d8faae.css",
+        "src": "src/entry/style.css",
+        "isEntry": true
+    },
+    "src/styles/base.css": {
+        "file": "base-33d54b18.css",
+        "src": "src/styles/base.css",
+        "isEntry": true
+    },
+    "src/scripts/index.css": {
+        "file": "index-29946b27.css",
+        "src": "src/scripts/index.css"
+    },
+    "src/entry/vite-env.d.ts": {
+        "file": "vite-env.d-4ed993c7.js",
+        "src": "src/entry/vite-env.d.ts",
+        "isEntry": true
+    },
+    "src/entry/assets/vite.svg": {
+        "file": "vite-4ed993c7.js",
+        "src": "src/entry/assets/vite.svg",
+        "isEntry": true
+    },
+    "src/scripts/customer.js": {
+        "file": "customer-4ed993c7.js",
+        "src": "src/scripts/customer.js",
+        "isEntry": true
+    },
+    "src/scripts/details-disclosure.js": {
+        "file": "details-disclosure-f4a31e98.js",
+        "src": "src/scripts/details-disclosure.js",
+        "isEntry": true
+    },
+    "src/scripts/cart-notification.js": {
+        "file": "cart-notification-cc7db038.js",
+        "src": "src/scripts/cart-notification.js",
+        "isEntry": true
+    },
+    "src/scripts/cart-drawer.js": {
+        "file": "cart-drawer-38bd2a83.js",
+        "src": "src/scripts/cart-drawer.js",
+        "isEntry": true
+    },
+    "src/scripts/cart.js": {
+        "file": "cart-5ee3868b.js",
+        "src": "src/scripts/cart.js",
+        "isEntry": true
+    },
+    "src/entry/main.ts": {
+        "file": "main-8108d053.js",
+        "src": "src/entry/main.ts",
+        "isEntry": true,
+        "imports": [
+            "src/entry/components/HelloWorld.vue",
+            "src/entry/App.vue",
+            "src/entry/assets/vue.svg"
+        ],
+        "css": ["style-f5d8faae.css"]
+    },
+    "src/scripts/details-modal.js": {
+        "file": "details-modal-51d20b17.js",
+        "src": "src/scripts/details-modal.js",
+        "isEntry": true
+    },
+    "src/scripts/facets.js": {
+        "file": "facets-9d8836ac.js",
+        "src": "src/scripts/facets.js",
+        "isEntry": true
+    },
+    "src/scripts/magnify.js": {
+        "file": "magnify-e7cdf758.js",
+        "src": "src/scripts/magnify.js",
+        "isEntry": true
+    },
+    "src/scripts/global.js": {
+        "file": "global-6995d218.js",
+        "src": "src/scripts/global.js",
+        "isEntry": true
+    },
+    "src/scripts/password-modal.js": {
+        "file": "password-modal-cc269f31.js",
+        "src": "src/scripts/password-modal.js",
+        "isEntry": true
+    },
+    "src/scripts/predictive-search.js": {
+        "file": "predictive-search-76cbf3ea.js",
+        "src": "src/scripts/predictive-search.js",
+        "isEntry": true
+    },
+    "src/scripts/pickup-availability.js": {
+        "file": "pickup-availability-447b8312.js",
+        "src": "src/scripts/pickup-availability.js",
+        "isEntry": true
+    },
+    "src/scripts/media-gallery.js": {
+        "file": "media-gallery-3ab6810a.js",
+        "src": "src/scripts/media-gallery.js",
+        "isEntry": true
+    },
+    "src/scripts/product-modal.js": {
+        "file": "product-modal-ad34b89c.js",
+        "src": "src/scripts/product-modal.js",
+        "isEntry": true
+    },
+    "src/scripts/product-model.js": {
+        "file": "product-model-7fbc532b.js",
+        "src": "src/scripts/product-model.js",
+        "isEntry": true
+    },
+    "src/scripts/product-form.js": {
+        "file": "product-form-b72db4c9.js",
+        "src": "src/scripts/product-form.js",
+        "isEntry": true
+    },
+    "src/scripts/quick-add.js": {
+        "file": "quick-add-35620ceb.js",
+        "src": "src/scripts/quick-add.js",
+        "isEntry": true
+    },
+    "src/scripts/show-more.js": {
+        "file": "show-more-e804bb48.js",
+        "src": "src/scripts/show-more.js",
+        "isEntry": true
+    },
+    "src/scripts/share.js": {
+        "file": "share-bc829d22.js",
+        "src": "src/scripts/share.js",
+        "isEntry": true
+    },
+    "src/scripts/theme-editor.js": {
+        "file": "theme-editor-948b40e2.js",
+        "src": "src/scripts/theme-editor.js",
+        "isEntry": true
+    },
+    "src/entry/App.vue": {
+        "file": "App-4ab790fa.js",
+        "src": "src/entry/App.vue",
+        "isEntry": true,
+        "imports": [
+            "src/entry/assets/vue.svg",
+            "src/entry/components/HelloWorld.vue"
+        ],
+        "css": ["App-30287257.css"],
+        "assets": ["vite-4a748afd.svg"]
+    },
+    "src/scripts/index.ts": {
+        "file": "index-e09e7c73.js",
+        "src": "src/scripts/index.ts",
+        "isEntry": true,
+        "css": ["index-29946b27.css"]
+    },
+    "src/entry/components/HelloWorld.vue": {
+        "file": "HelloWorld-dd61562b.js",
+        "src": "src/entry/components/HelloWorld.vue",
+        "isEntry": true,
+        "css": ["HelloWorld-92f09db3.css"]
+    }
 }

@@ -9,4 +9,5 @@ node_modules/
 jspm_packages/
 .npmrc
 .prettierignore
-src
+.husky/
+src/
