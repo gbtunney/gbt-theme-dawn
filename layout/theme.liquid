@@ -29,7 +29,12 @@
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    {%- liquid
+      render 'vite-client'
+      render 'vite-tag' with '/entry/index.js' as vite-tag
+    -%}
+    {% render 'vite-tag' with '/src/scripts/global.js' as vite-tag %}
+
     {{ content_for_header }}
 
     {%- liquid
@@ -216,7 +221,7 @@
       }
     {% endstyle %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {% render 'vite-tag' with '@/styles/base.css' as vite-tag %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -248,7 +253,6 @@
     {% section 'announcement-bar' %}
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-     <h1>STAGING FILE</h1>
       {{ content_for_layout }}
     </main>
 
@@ -290,7 +294,10 @@
     </script>
 
     {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      {% render 'vite-tag' with '@/scripts/predictive-search.js' as vite-tag %}
     {%- endif -%}
+
+{% comment %}    {% render 'vite-tag' with '/src/entry/main.ts' as vite-tag %}
+{% endcomment %}
   </body>
 </html>

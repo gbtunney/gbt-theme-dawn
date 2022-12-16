@@ -1,0 +1,11 @@
+{
+    "extends": "./node_modules/@snailicide/build-config/tsconfig-base",
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["ESNext", "DOM"],
+        "module": "ESNext",
+        "rootDir": "."
+    },
+    "exclude": ["dist", "build", "node_modules", "**/*.test.ts"],
+    "include": ["**/*.ts", "**/*.cts", "**/*.mts"]
+}

@@ -106,11 +106,14 @@
   }
 {%- endstyle -%}
 
-<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+{% render 'vite-tag' with '@/scripts/details-disclosure.js' as vite-tag %}
+{% render 'vite-tag' with '@/scripts/details-modal.js' as vite-tag %}
+{% render 'vite-tag' with '@/scripts/cart-notification.js' as vite-tag %}
+
 {%- if settings.cart_type == "drawer" -%}
   <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+  {% render 'vite-tag' with '@/scripts/cart-drawer.js' as vite-tag %}
+
 {%- endif -%}
 
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
